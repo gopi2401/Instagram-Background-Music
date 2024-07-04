@@ -1,27 +1,27 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 
-const AudioPlayer = ({ url }) => {
+const AudioPlayer = ({ url, duration }) => {
     const audioRef = useRef(null);
-    const [duration, setDuration] = useState(0);
+    // const [duration, setDuration] = useState(0);
 
-    useEffect(() => {
-        const handleLoadedMetadata = () => {
-            if (audioRef.current) {
-                setDuration(audioRef.current.duration);
-            }
-        };
+    // useEffect(() => {
+    //     const handleLoadedMetadata = () => {
+    //         if (audioRef.current) {
+    //             setDuration(audioRef.current.duration);
+    //         }
+    //     };
 
-        const audioElement = audioRef.current;
-        if (audioElement) {
-            audioElement.addEventListener('loadedmetadata', handleLoadedMetadata);
-        }
+    //     const audioElement = audioRef.current;
+    //     if (audioElement) {
+    //         audioElement.addEventListener('loadedmetadata', handleLoadedMetadata);
+    //     }
 
-        return () => {
-            if (audioElement) {
-                audioElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
-            }
-        };
-    }, [url]);
+    //     return () => {
+    //         if (audioElement) {
+    //             audioElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
+    //         }
+    //     };
+    // }, [url]);
 
     const handlePlay = () => {
         if (audioRef.current) {
@@ -35,11 +35,11 @@ const AudioPlayer = ({ url }) => {
         }
     };
 
-    const formatTime = (time) => {
-        const minutes = Math.floor(time / 60);
-        const seconds = Math.floor(time % 60);
-        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    };
+    // const formatTime = (time) => {
+    //     const minutes = Math.floor(time / 60);
+    //     const seconds = Math.floor(time % 60);
+    //     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    // };
 
     return (
         <div className="flex items-center space-x-4">
@@ -56,7 +56,7 @@ const AudioPlayer = ({ url }) => {
                 Pause
             </button>
             <audio ref={audioRef} src={url} />
-            <span>{formatTime(duration)}</span>
+            <span>{`${duration?.minutes}:${duration?.seconds < 10 ? '0' : ''}${duration?.seconds}`}</span>
         </div>
     );
 };
