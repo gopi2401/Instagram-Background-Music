@@ -45,7 +45,7 @@ const songs = [
   { alt: '🏜️', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f3dc-fe0f.png', title: "Sahara", artist: "Hensonn", file_name: 'Hensonn-Sahara.mp3', duration: { minutes: 2, seconds: 51 }, vibe: ["Sigma"] },
   { alt: '🌀', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f300.png', title: "particles (slowed)", artist: "villiam lane", file_name: 'villiam lane - particles (slowed).mp3', duration: { minutes: 2, seconds: 45 }, vibe: ["Sigma"] },
   { alt: '🦋', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f98b.png', title: "METAMORPHOSIS", artist: "Interworld", file_name: 'METAMORPHOSIS.mp3', duration: { minutes: 2, seconds: 22 }, vibe: ["Phonk"] },
-  { alt: 'Page_icon', emojis_url: 'https://hail-bakery-d94.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ff69b3bf2-7d6f-4d02-af5b-b6f6fbb15252%2Ffe4985e9-9f50-4fa9-af5f-c83f90d660e6%2Fraf_360x360_075_t_fafafa_ca443f4786-removebg-preview.png?table=block&id=407e29c6-d0d7-43a0-8a98-ecfde58b33fa&spaceId=f69b3bf2-7d6f-4d02-af5b-b6f6fbb15252&width=250&userId=&cache=v2', title: "GigaChad Theme", artist: "g3ox_em", file_name: 'g3oxem - GigaChad Theme (Phonk House Version).mp3', duration: { minutes: 2, seconds: 26 }, vibe: ["Phonk"] },
+  { alt: '💀', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f480.png', title: "GigaChad Theme", artist: "g3ox_em", file_name: 'g3oxem - GigaChad Theme (Phonk House Version).mp3', duration: { minutes: 2, seconds: 26 }, vibe: ["Phonk"] },
   { alt: '🌌', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f30c.png', title: "Dream Space", artist: "DVRST", file_name: 'DVRST - Dream Space.mp3', duration: { minutes: 2, seconds: 51 }, vibe: ["Phonk"] },
   { alt: '🔮', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f52e.png', title: "ESSENCE", artist: "Casper", file_name: 'ESSENCE.mp3', duration: { minutes: 3, seconds: 26 }, vibe: ["Phonk"] },
   { alt: '👁️', emojis_url: 'https://notion-emojis.s3-us-west-2.amazonaws.com/prod/img-google-136/1f441-fe0f.png', title: "Close Eyes (slowed + reverb)", artist: "DVRST", file_name: 'DVRST - Close Eyes (Slowed  Reverb).mp3', duration: { minutes: 2, seconds: 23 }, vibe: ["Phonk"] },
@@ -70,9 +70,9 @@ const App = () => {
     <>
       <head><title>Instagram Background Music Pack (1)</title></head>
       <div className="min-h-screen bg-white dark:bg-darkBackground text-[#37352f] dark:text-white/80">
-        <div className='w-full h-52 overflow-hidden '>
-          <img alt='header' className='object-cover' src='./image.jpg'></img>
-        </div>
+        <header className='w-full h-52 overflow-hidden '>
+          <img alt='header_img' className='object-cover' src='/pubilc/image.jpg'></img>
+        </header>
         <div className="container mx-auto p-4 ">
           <h1 className="text-center text-4xl font-bold mb-4">Instagram Background Music Pack (1)</h1>
           <div className="overflow-x-auto mx-auto w-3/4">

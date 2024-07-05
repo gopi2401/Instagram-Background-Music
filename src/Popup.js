@@ -6,7 +6,7 @@ const Popup = ({ isOpen, onClose, song }) => {
     if (!isOpen) return null;
     return (
         <>
-            <head><title>{song?.title}</title></head>
+            {/* <head><title>{song?.title}</title></head> */}
             <div className="popup-overlay">
                 <div className="popup-content bg-darkBackground">
                     <button className="popup-close text-black" onClick={onClose}>×</button>
